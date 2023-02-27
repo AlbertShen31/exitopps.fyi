@@ -1,0 +1,143 @@
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .hero-content__title {
+    font-size: 7.5rem;
+  }
+
+  .hero-screen__image {
+    max-width: 70%;
+  }
+
+  .testimonial-item:nth-child(2) {
+    transform: translateY(0);
+  }
+
+  .pricing-content {
+    margin-bottom: 5rem;
+  }
+
+  .plans-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-item:nth-child(2) {
+    margin-top: 0;
+    padding: 2rem 1rem;
+  }
+
+  .plan-item {
+    min-width: 50rem;
+  }
+  .plan-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .plan-item:not(:nth-child(2)) {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-info {
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    /* position: fixed; TODO Enable when we mobile nav links */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+  .nav__menu {
+    display: none;
+  }
+
+  .mobilenav-toggle {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .hero-content__title {
+    font-size: 6rem;
+  }
+
+  .hero-content__paragraph {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 3.8rem;
+  }
+
+  .faq-list {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom__copyright {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    padding: 0 2.5rem;
+  }
+
+  .hero-content__title {
+    font-size: 4rem;
+  }
+
+  .features-content {
+    padding: 0 2.5rem;
+  }
+
+  .plan-item {
+    min-width: 100%;
+  }
+
+  .newsletter-content__form {
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+  }
+  .newsletter-content__form input {
+    margin-bottom: 1.2rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 376px) {
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .hero-cta a:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 1.6rem;
+  }
+}

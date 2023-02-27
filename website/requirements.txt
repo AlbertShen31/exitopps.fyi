@@ -1,0 +1,10 @@
+django
+plotly
+bs4
+markdown
+django-markdownify
+numpy
+pandas
+networkx
+pyvis
+user_agents

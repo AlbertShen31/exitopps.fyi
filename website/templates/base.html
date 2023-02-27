@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y438NV52WN"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y438NV52WN');
+      </script>
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>exitopps.fyi</title>
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+  </head>
+  <body>
+      <!-- Header start -->
+      <header class="header">
+          <div class="header__container flex-space">
+            <div>
+              <a href="/" >
+                <span class="logo-text">exitopps<span style='font-weight:bold'>.fyi</span></span>
+              </a>
+            </div>
+              <nav class="nav">
+                  <ul class="nav__menu">
+                    <li class="nav__menu--item"><a href="#exit_opportunities">Exit Opportunities</a></li>
+                    <li class="nav__menu--item"><a href="#university_recruiting">University Recruiting</a></li>
+                  </ul>
+                  <!-- <div class="mobilenav-toggle">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div> -->
+              </nav>
+              <!-- <nav class="mobile-nav">
+                  <ul class="nav__menu">
+                      TODO: put mobile nav links here
+                  </ul>
+              </nav> -->
+          </div>
+      </header>
+      <!-- Header end -->
+
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+      <!-- Footer start -->
+      <footer id="footer" class="pad-s">
+          <div class="container">
+              <div class="footer-bottom">
+                  <p class="footer-bottom__copyright">Copyright © 2022 exitopps.fyi</p>
+                  <ul class="footer-bottom__social">
+                      <a class="footer-bottom__copyright" href="/privacy">Privacy Policy</a>
+                      <!-- TODO: add social media / contact links when available -->
+                  </ul>
+              </div>
+          </div>
+      </footer>
+      <!-- Footer end -->
+
+      <script>
+        window.onload = function() {
+            var convertKitDisclaimers = document.getElementsByClassName("formkit-powered-by-convertkit");
+            for (i = 0; i < convertKitDisclaimers.length; i++){
+              convertKitDisclaimers[i].setAttribute("data-variant", "light");
+            }
+      
+        };
+      </script>
+      
+  </body>
+
+  <script src="{% static 'js/app.js' %}"></script>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+</html>

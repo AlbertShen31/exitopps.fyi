@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<main>
+  <!-- Hero start -->
+  <section onload="setGetParameter">
+    <div class="hero pad-s">
+      <canvas class="background"></canvas>
+      <div class="container container-top">
+        <div class="hero-content m-a">
+          <div class="hero-content__innercontainer">
+            <h1 class="hero-content__title mb-m">Don't Leave your Career Up to Chance</h1>
+            <p class="hero-content__paragraph m-a mb-lm">
+              Detailed employment datasets to help you map out your career path and optimize for high-growth opportunities
+            </p>
+            <div class="newsletter-content">
+              <script async data-uid="2d08c21cf3" src="https://crafty-producer-6165.ck.page/2d08c21cf3/index.js"></script>
+              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+              <script type='text/javascript'>
+                (function ($) {
+                  window.fnames = new Array();
+                  window.ftypes = new Array();
+                  fnames[0] = 'EMAIL';
+                  ftypes[0] = 'email';
+                }(jQuery));
+                var $mcj = jQuery.noConflict(true);
+              </script>
+            </div>
+          </div>
+          <img class="screenshot-small"
+            src="{% static 'img/exitopps_college_viz.png' %}" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-screen"></div>
+  </section>
+  <!-- Hero end -->
+
+  <!-- Plot start -->
+  <section id="university_recruiting" class="pad-l">
+    <div class="container">
+      <div class="text-center mb-l">
+        <h3 class="section-title">Where did Software Engineers at {{company_name}} attend college?</h3>
+      </div>
+      <div>
+        <a href="/?company=Facebook" class="company-btn">
+          <img src="{% static 'img/facebook.png' %}" class="company-icon" width="25px"/>Facebook</a>
+        <a href="/?company=Amazon" class="company-btn">
+          <img src="{% static 'img/amazon.png' %}" class="company-icon" width="25px"/>Amazon</a>
+        <a href="/?company=Apple" class="company-btn">
+          <img src="{% static 'img/apple.png' %}" class="company-icon" width="25px"/>Apple</a>
+        <a href="/?company=Microsoft" class="company-btn">
+          <img src="{% static 'img/microsoft.png' %}" class="company-icon" width="25px"/>Microsoft</a>
+        <a href="/?company=Google" class="company-btn">
+          <img src="{% static 'img/google.png' %}" class="company-icon" width="25px"/>Google</a>
+      </div>
+      <div style="width:100%;height:50%">
+        {% autoescape off %}
+        {{ college_plot }}
+        {% endautoescape %}
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Plot end -->
+
+  <!-- Plot start -->
+  <section id="exit_opportunities" class="pad-l">
+    <div class="container">
+      <div class="text-center mb-l">
+        <h3 class="section-title">Where do Software Engineers at {{company_name}} work before & afterwards?</h3>
+      </div>
+      <div style="margin-bottom:20px">
+        <a href="/?company=Facebook" class="company-btn">
+          <img src="{% static 'img/facebook.png' %}" class="company-icon" width="25px"/>Facebook</a>
+        <a href="/?company=Amazon" class="company-btn">
+          <img src="{% static 'img/amazon.png' %}" class="company-icon" width="25px"/>Amazon</a>
+        <a href="/?company=Apple" class="company-btn">
+          <img src="{% static 'img/apple.png' %}" class="company-icon" width="25px"/>Apple</a>
+        <a href="/?company=Microsoft" class="company-btn">
+          <img src="{% static 'img/microsoft.png' %}" class="company-icon" width="25px"/>Microsoft</a>
+        <a href="/?company=Google" class="company-btn">
+          <img src="{% static 'img/google.png' %}" class="company-icon" width="25px"/>Google</a>
+      </div>
+      
+      <div>
+        {% include 'pvis_graph_file.html' %}
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Plot end -->
+
+  <section id="newsletter" class="pad-l">
+    <div class="container">
+      <div class="newsletter-content">
+
+        <h2 class="newsletter-content__title">Get Notified When We Launch</h2>
+        <p class="newsletter-content__paragraph">Want to learn more about the tech industry? Sign up to get notified
+          when we release our next employment datasets. 🚀 🚀 🚀 </p>
+        <script async data-uid="2d08c21cf3" src="https://crafty-producer-6165.ck.page/2d08c21cf3/index.js"></script>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+      <script type='text/javascript'>
+        (function ($) {
+          window.fnames = new Array();
+          window.ftypes = new Array();
+          fnames[0] = 'EMAIL';
+          ftypes[0] = 'email';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+      </script>
+    </div>
+  </section>
+
+  {%endblock%}
